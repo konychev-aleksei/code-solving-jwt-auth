@@ -1,0 +1,61 @@
+.wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  transform: scale(1.15);
+
+  animation: appearence 0.5s;
+
+  &__startup {
+    height: 100vh;
+    justify-content: center;
+  }
+
+  & > * {
+    width: min(400px, 70vw) !important;
+  }
+
+  & > h2,
+  & > p,
+  & > a {
+    text-align: center;
+    margin: 10px 0;
+    color: #222;
+    font-weight: 100;
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+  gap: 10px;
+
+  &__header {
+    top: 10px;
+    right: 30px;
+    position: fixed;
+
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 15px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@keyframes appearence {
+  0% {
+    opacity: 0;
+  }
+}

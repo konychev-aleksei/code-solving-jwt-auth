@@ -1,0 +1,19 @@
+@use '../../../variables.scss' as *;
+
+.form {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  align-items: center;
+  gap: 10px;
+
+  width: 800px;
+  padding: 15px;
+
+  border-radius: 10px;
+  border: 1px solid $border-color;
+
+  button:nth-of-type(1) {
+    justify-self: flex-end;
+    width: 150px;
+  }
+}

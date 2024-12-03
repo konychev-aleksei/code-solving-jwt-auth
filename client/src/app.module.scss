@@ -1,0 +1,27 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px !important;
+  text-decoration: none;
+  overflow: visible;
+}
+
+body {
+  position: static !important;
+  overflow: auto !important;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  top: 10px;
+  z-index: 99999;
+}
+
