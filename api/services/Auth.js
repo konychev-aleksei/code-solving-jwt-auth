@@ -14,16 +14,12 @@ class AuthService {
       throw new NotFound('Пользователь не найден!');
     }
 
-    /*
     const hashedPassword = await bcrypt.hash(password, 8);
 
     const isPasswordValid = await bcrypt.compare(
       userData.password,
       hashedPassword
     );
-    */
-
-    const isPasswordValid = userData.password === password;
 
     if (!isPasswordValid) {
       throw new Forbidden('Неверный логин или пароль!');
@@ -55,11 +51,11 @@ class AuthService {
       throw new Conflict('Пользователь с таким именем уже существует!');
     }
 
-    // const hashedPassword = await bcrypt.hash(password, 8);
+    const hashedPassword = await bcrypt.hash(password, 8);
 
     const { id } = await UserRepository.createUser({
       userName,
-      hashedPassword: password,
+      hashedPassword,
       role,
     });
 
